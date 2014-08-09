@@ -1,6 +1,9 @@
 /** Helper Class */
 package org.cubedservers.cstweaks.helpers;
 
+import java.awt.Desktop;
+import java.net.URL;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
@@ -9,6 +12,10 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 
 public class Utils {
+	/**
+	 * Copied from CoFHLib BlockHelper.class (https://github.com/CoFH/CoFHLib/blob/master/src/main/java/cofh/util/BlockHelper.java), with KingLemmings permission!
+	 * @author King Lemming
+	 */
 	public static MovingObjectPosition getMovingObjectPosition(EntityPlayer player){
 		Vec3 posVec = Vec3.createVectorHelper(player.posX, player.posY, player.posZ);
 		Vec3 lookVec = player.getLook(1);
@@ -17,6 +24,7 @@ public class Utils {
 		return player.worldObj.rayTraceBlocks(posVec, lookVec);
 	}
 	
+	/** @author wasliebob */
 	public static Block getTargetBlock(EntityPlayer player){
 		MovingObjectPosition mop = getMovingObjectPosition(player);
 		if(mop != null){
@@ -31,6 +39,7 @@ public class Utils {
 		return null;
 	}
 	
+	/** @author wasliebob */
 	public static TileEntity getTargetTile(EntityPlayer player){
 		MovingObjectPosition mop = getMovingObjectPosition(player);
 		if(mop != null){
@@ -45,6 +54,7 @@ public class Utils {
 		return null;
 	}
 	
+	/** @author wasliebob */
 	public static int getTargetBlockMeta(EntityPlayer player){
 		MovingObjectPosition mop = getMovingObjectPosition(player);
 		if(mop != null){
@@ -60,6 +70,7 @@ public class Utils {
 		return 0;
 	}
 	
+	/** @author wasliebob */
 	public static int getTargetX(EntityPlayer player){
 		MovingObjectPosition mop = getMovingObjectPosition(player);
 		if(mop != null)
@@ -67,6 +78,7 @@ public class Utils {
 		return 0;
 	}
 
+	/** @author wasliebob */
 	public static int getTargetY(EntityPlayer player){
 		MovingObjectPosition mop = getMovingObjectPosition(player);
 		if(mop != null)
@@ -74,6 +86,7 @@ public class Utils {
 		return 0;
 	}
 	
+	/** @author wasliebob */
 	public static int getTargetZ(EntityPlayer player){
 		MovingObjectPosition mop = getMovingObjectPosition(player);
 		if(mop != null)
@@ -81,6 +94,7 @@ public class Utils {
 		return 0;
 	}
 	
+	/** @author wasliebob */
 	public static int getTargetBlockSide(EntityPlayer player){
 		MovingObjectPosition mop = getMovingObjectPosition(player);
 		if(mop != null){
@@ -89,7 +103,17 @@ public class Utils {
 		return 0;
 	}
 	
+	/** @author wasliebob */
 	public static Minecraft getMinecraft(){
 		return Minecraft.getMinecraft();
+	}
+	
+	/** @author wasliebob */
+	public static void openURL(String url){
+		try{
+			Desktop.getDesktop().browse(new URL(url).toURI());
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 	}
 }
