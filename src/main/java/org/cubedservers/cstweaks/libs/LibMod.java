@@ -1,3 +1,6 @@
+/**
+* Created by wasliebob, on 9 aug. 2014, at 21:48:45
+*/
 package org.cubedservers.cstweaks.libs;
 
 public class LibMod {
