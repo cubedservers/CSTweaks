@@ -23,7 +23,7 @@ public class ConfigHelper {
     public void preInitConfig(FMLPreInitializationEvent event){
         configuration = new Configuration(event.getSuggestedConfigurationFile());
         new ConfigCategory(CATEGORY_GENERAL);
-        databaseIp = configuration.get(CATEGORY_GENERAL, "MongoDB ip", "iongaming.org").getString();
+        databaseIp = configuration.get(CATEGORY_GENERAL, "MongoDB ip", "iomgaming.org").getString();
 
         databaseIp = configuration.get(CATEGORY_GENERAL, "MongoDB user", "user").getString();
 
