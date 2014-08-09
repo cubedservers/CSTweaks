@@ -1,5 +1,6 @@
 package org.cubedservers.cstweaks.main;
 
+import org.cubedservers.cstweaks.inventorysync.DatabaseHelper;
 import org.cubedservers.cstweaks.libs.LibMod;
 
 import cpw.mods.fml.common.Mod;
@@ -11,6 +12,8 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
 @Mod(name=LibMod.modName, modid=LibMod.modId, version=LibMod.version)
 public class CSTweaks {
+
+    DatabaseHelper databaseHelper = new DatabaseHelper();
 
     @Instance
     public static CSTweaks instance;
@@ -27,6 +30,6 @@ public class CSTweaks {
 
     @EventHandler
     public void serverStarting(FMLServerStartingEvent event){
-        
+        databaseHelper.connect();
     }
 }
