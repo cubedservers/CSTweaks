@@ -1,4 +1,4 @@
-package org.cubedservers.cstweaks;
+package org.cubedservers.cstweaks.main;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Instance;
