@@ -3,6 +3,9 @@
 */
 package org.cubedservers.cstweaks.main.init;
 
+import net.minecraft.block.material.Material;
+
+import org.cubedservers.cstweaks.blocks.CSTBlock;
 import org.cubedservers.cstweaks.interfaces.IInitalization;
 
 public class CSTBlocks implements IInitalization{
@@ -13,8 +16,9 @@ public class CSTBlocks implements IInitalization{
 	}
 
 	public void setupBlocks(){
-		
+		grass_infested = new CSTBlock("infested grass", "grass_infested", 1.0F, Material.grass);
 	}
+	public static CSTBlock grass_infested;
 	
 	@Override
 	public void init() {
