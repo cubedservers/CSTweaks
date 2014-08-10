@@ -5,7 +5,7 @@ package org.cubedservers.cstweaks.main.init;
 
 import org.cubedservers.cstweaks.interfaces.IInitalization;
 
-public class InitMisc implements IInitalization{
+public class CSTMisc implements IInitalization{
 
 	@Override
 	public void preInit(){
