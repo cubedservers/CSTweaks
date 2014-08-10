@@ -47,6 +47,6 @@ public class CSTweaks {
 
     @EventHandler
     public void serverStarting(FMLServerStartingEvent event){
-//        databaseHelper.connect();
+        databaseHelper.connect();
     }
 }
