@@ -30,9 +30,9 @@ public class CSTCommandProfession extends CommandBase{
 	public void processCommand(ICommandSender sender, String[] array) {
 		if(sender instanceof EntityPlayer){
 			EntityPlayer player = (EntityPlayer)sender;
-			sendMessage(player, "Combat: " + ProfessionData.getProfessionLevel(player, EnumProfessions.COMBAT));
-			sendMessage(player, "Woodcutting: " + ProfessionData.getProfessionLevel(player, EnumProfessions.WOODCUTTING));
-			sendMessage(player, "Mining: " + ProfessionData.getProfessionLevel(player, EnumProfessions.MINING));
+			sendMessage(player, "Combat: " + ProfessionData.getProfessionExperience(player, EnumProfessions.COMBAT));
+			sendMessage(player, "Woodcutting: " + ProfessionData.getProfessionExperience(player, EnumProfessions.WOODCUTTING));
+			sendMessage(player, "Mining: " + ProfessionData.getProfessionExperience(player, EnumProfessions.MINING));
 
 		}
 	}

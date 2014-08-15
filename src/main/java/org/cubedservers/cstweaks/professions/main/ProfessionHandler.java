@@ -4,5 +4,6 @@
 package org.cubedservers.cstweaks.professions.main;
 
 public class ProfessionHandler {
-	/** TODO */
+	/** TODO IF NEEDED, Might do it class side*/
+		/** Idea atm, on block break/item use adding level */
 }

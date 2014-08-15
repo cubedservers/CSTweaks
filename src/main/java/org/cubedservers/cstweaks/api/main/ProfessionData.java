@@ -10,19 +10,24 @@ import net.minecraft.entity.player.EntityPlayer;
 import org.cubedservers.cstweaks.api.enums.EnumProfessions;
 
 public class ProfessionData {
-	public static void writeProfessionLevel(EntityPlayer player, EnumProfessions profession, int level){
+	public static void writeProfessionExperience(EntityPlayer player, EnumProfessions profession, int level){
 		player.getEntityData().setInteger(profession.name, level);
 	}
 	
-	public static void increaseProfessionsLevel(EntityPlayer player, EnumProfessions profession, int level){
+	public static void increaseProfessionsExperience(EntityPlayer player, EnumProfessions profession, int level){
 		player.getEntityData().setInteger(profession.name, player.getEntityData().getInteger(profession.name) + level);
 	}
 	
-	public static void decreaseProfessionsLevel(EntityPlayer player, EnumProfessions profession, int level){
+	public static void decreaseProfessionsExperience(EntityPlayer player, EnumProfessions profession, int level){
 		player.getEntityData().setInteger(profession.name, player.getEntityData().getInteger(profession.name) - level);
 	}
 	
-	public static int getProfessionLevel(EntityPlayer player, EnumProfessions profession){
+	public static int getProfessionExperience(EntityPlayer player, EnumProfessions profession){
 		return player.getEntityData().getInteger(profession.name);
+	}
+	
+	public static int getProfessionLevel(EntityPlayer player, EnumProfessions profession){
+		int experienceToLevel = 100;
+		return player.getEntityData().getInteger(profession.name) / 100;
 	}
 }

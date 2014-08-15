@@ -4,6 +4,7 @@ import net.minecraft.client.Minecraft;
 
 import org.cubedservers.cstweaks.api.enums.EnumProfessions;
 import org.cubedservers.cstweaks.api.main.ProfessionData;
+import org.cubedservers.cstweaks.api.registries.ToolRegistry;
 import org.cubedservers.cstweaks.commands.CSTCommandProfession;
 import org.cubedservers.cstweaks.inventorysync.DatabaseHelper;
 import org.cubedservers.cstweaks.libs.LibMod;
@@ -47,6 +48,7 @@ public class CSTweaks {
     	items.init();
     	blocks.init();
     	misc.init();
+    	ToolRegistry.register();
     }
     
     @EventHandler
@@ -60,7 +62,7 @@ public class CSTweaks {
     public void serverStarting(FMLServerStartingEvent event){
     	event.registerServerCommand(new CSTCommandProfession());
         
-    	/** Disabled until pixle fixes it */
+    	/** Disabled until pixlepix fixes it */
     	//databaseHelper.connect();
     }
 }
