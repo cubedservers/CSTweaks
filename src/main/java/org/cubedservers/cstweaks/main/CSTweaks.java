@@ -1,5 +1,10 @@
 package org.cubedservers.cstweaks.main;
 
+import net.minecraft.client.Minecraft;
+
+import org.cubedservers.cstweaks.api.enums.EnumProfessions;
+import org.cubedservers.cstweaks.api.main.ProfessionData;
+import org.cubedservers.cstweaks.commands.CSTCommandProfession;
 import org.cubedservers.cstweaks.inventorysync.DatabaseHelper;
 import org.cubedservers.cstweaks.libs.LibMod;
 import org.cubedservers.cstweaks.main.init.CSTBlocks;
@@ -53,6 +58,9 @@ public class CSTweaks {
 
     @EventHandler
     public void serverStarting(FMLServerStartingEvent event){
-        databaseHelper.connect();
+    	event.registerServerCommand(new CSTCommandProfession());
+        
+    	/** Disabled until pixle fixes it */
+    	//databaseHelper.connect();
     }
 }
