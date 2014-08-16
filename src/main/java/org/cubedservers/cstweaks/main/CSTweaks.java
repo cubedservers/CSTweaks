@@ -1,14 +1,10 @@
 package org.cubedservers.cstweaks.main;
 
-import net.minecraft.client.Minecraft;
-
-import org.cubedservers.cstweaks.api.enums.EnumProfessions;
-import org.cubedservers.cstweaks.api.main.ProfessionData;
-import org.cubedservers.cstweaks.api.registries.ToolRegistry;
 import org.cubedservers.cstweaks.commands.CSTCommandProfession;
 import org.cubedservers.cstweaks.inventorysync.DatabaseHelper;
 import org.cubedservers.cstweaks.libs.LibMod;
 import org.cubedservers.cstweaks.main.init.CSTBlocks;
+import org.cubedservers.cstweaks.main.init.CSTEvents;
 import org.cubedservers.cstweaks.main.init.CSTItems;
 import org.cubedservers.cstweaks.main.init.CSTMisc;
 import org.cubedservers.cstweaks.proxies.CommonProxy;
@@ -34,6 +30,7 @@ public class CSTweaks {
     public static CSTItems items = new CSTItems();
     public static CSTBlocks blocks = new CSTBlocks();
     public static CSTMisc misc = new CSTMisc();
+    public static CSTEvents events = new CSTEvents();
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event){
@@ -41,6 +38,7 @@ public class CSTweaks {
     	items.preInit();
     	blocks.preInit();
         misc.preInit();
+        events.preInit();
     }
 
     @EventHandler
@@ -48,7 +46,7 @@ public class CSTweaks {
     	items.init();
     	blocks.init();
     	misc.init();
-    	ToolRegistry.register();
+    	events.init();
     }
     
     @EventHandler
@@ -56,6 +54,7 @@ public class CSTweaks {
     	items.postInit();
     	blocks.postInit();
     	misc.postInit();
+    	events.postInit();
     }
 
     @EventHandler

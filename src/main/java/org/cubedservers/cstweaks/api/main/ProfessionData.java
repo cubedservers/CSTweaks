@@ -27,7 +27,7 @@ public class ProfessionData {
 	}
 	
 	public static int getProfessionLevel(EntityPlayer player, EnumProfessions profession){
-		int experienceToLevel = 100;
-		return player.getEntityData().getInteger(profession.name) / 100;
+		int experienceToLevel = 100 * (ProfessionData.getProfessionLevel(player, profession) + 1);
+		return player.getEntityData().getInteger(profession.name) / experienceToLevel;
 	}
 }

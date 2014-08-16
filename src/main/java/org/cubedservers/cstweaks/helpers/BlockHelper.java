@@ -6,14 +6,6 @@ package org.cubedservers.cstweaks.helpers;
 import net.minecraft.block.Block;
 
 public class BlockHelper {
-	public static Block getBlockFromID(int id){
-		return Block.getBlockById(id);
-	}
-	
-	public static int getBlockID(Block block){
-		return Block.blockRegistry.getIDForObject(block);
-	}
-	
 	public static Block getBlockFromName(String name){
 		return Block.getBlockFromName(name);
 	}

@@ -4,7 +4,7 @@
 package org.cubedservers.cstweaks.api.enums;
 
 public enum EnumProfessions {
-	WOODCUTTING("Woodcutting"), MINING("Mining"), COMBAT("Combat");
+	WOODCUTTING("Woodcutting"), MINING("Mining"), DIGGING("Diggin"), COMBAT("Combat");
 	
 	public String name;
 	
