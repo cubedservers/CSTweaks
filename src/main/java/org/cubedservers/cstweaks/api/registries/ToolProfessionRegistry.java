@@ -23,8 +23,6 @@ public class ToolProfessionRegistry {
 						toolProfessions.put(name, EnumProfessions.MINING);
 					}else if(name.contains("axe")){
 						toolProfessions.put(name, EnumProfessions.WOODCUTTING);
-					}else if(name.contains("sword")){
-						toolProfessions.put(name, EnumProfessions.COMBAT);
 					}else if(name.contains("spade") || name.contains("shovel")){
 						toolProfessions.put(name, EnumProfessions.DIGGING);
 					}

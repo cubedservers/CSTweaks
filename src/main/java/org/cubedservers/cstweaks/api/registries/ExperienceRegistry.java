@@ -12,6 +12,7 @@ public class ExperienceRegistry {
 	public static HashMap<Block, Integer> professionXP = new HashMap<Block, Integer>(); 
 	
 	public static void register(){
+		/** Mining */
 		professionXP.put(Blocks.emerald_ore, 50);
 		professionXP.put(Blocks.diamond_ore, 30);
 		professionXP.put(Blocks.gold_ore, 20);
@@ -21,5 +22,9 @@ public class ExperienceRegistry {
 		professionXP.put(Blocks.redstone_ore, 2);
 		professionXP.put(Blocks.lapis_ore, 2);
 		professionXP.put(Blocks.quartz_ore, 2);
+		
+		/** Diging */
+		professionXP.put(Blocks.clay, 2);
+		professionXP.put(Blocks.soul_sand, 2);
 	}
 }

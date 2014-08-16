@@ -4,7 +4,6 @@
 
 package org.cubedservers.cstweaks.api.main;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 
 import org.cubedservers.cstweaks.api.enums.EnumProfessions;
@@ -24,10 +23,5 @@ public class ProfessionData {
 	
 	public static int getProfessionExperience(EntityPlayer player, EnumProfessions profession){
 		return player.getEntityData().getInteger(profession.name);
-	}
-	
-	public static int getProfessionLevel(EntityPlayer player, EnumProfessions profession){
-		int experienceToLevel = 100 * (ProfessionData.getProfessionLevel(player, profession) + 1);
-		return player.getEntityData().getInteger(profession.name) / experienceToLevel;
 	}
 }

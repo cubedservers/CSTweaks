@@ -9,15 +9,19 @@ import org.cubedservers.cstweaks.api.registries.LevelBlockRegistry;
 import org.cubedservers.cstweaks.api.registries.ToolProfessionRegistry;
 import org.cubedservers.cstweaks.interfaces.IInitalization;
 
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+
 public class CSTMisc implements IInitalization{
 
 	@Override
-	public void preInit(){
+    public void preInit(FMLPreInitializationEvent event){
 		
 	}
 
 	@Override
-	public void init(){
+    public void init(FMLInitializationEvent event){
     	BlockProfessionRegistry.register();
     	ExperienceRegistry.register();
     	LevelBlockRegistry.register();
@@ -25,7 +29,7 @@ public class CSTMisc implements IInitalization{
 	}
 
 	@Override
-	public void postInit(){
+    public void postInit(FMLPostInitializationEvent event){
 		
 	}
 }

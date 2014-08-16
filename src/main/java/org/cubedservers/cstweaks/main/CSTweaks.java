@@ -35,26 +35,26 @@ public class CSTweaks {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event){
     	proxy.load();
-    	items.preInit();
-    	blocks.preInit();
-        misc.preInit();
-        events.preInit();
+    	items.preInit(event);
+    	blocks.preInit(event);
+        misc.preInit(event);
+        events.preInit(event);
     }
 
     @EventHandler
     public void init(FMLInitializationEvent event){
-    	items.init();
-    	blocks.init();
-    	misc.init();
-    	events.init();
+    	items.init(event);
+    	blocks.init(event);
+    	misc.init(event);
+    	events.init(event);
     }
     
     @EventHandler
     public void postInit(FMLPostInitializationEvent event){
-    	items.postInit();
-    	blocks.postInit();
-    	misc.postInit();
-    	events.postInit();
+    	items.postInit(event);
+    	blocks.postInit(event);
+    	misc.postInit(event);
+    	events.postInit(event);
     }
 
     @EventHandler

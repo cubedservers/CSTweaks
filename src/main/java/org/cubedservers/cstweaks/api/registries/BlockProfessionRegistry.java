@@ -22,7 +22,8 @@ public class BlockProfessionRegistry {
 	public static void registerMining(){
 		blocksProfessions.put(Blocks.cobblestone, EnumProfessions.MINING);
 		blocksProfessions.put(Blocks.stone, EnumProfessions.MINING);
-		
+		blocksProfessions.put(Blocks.mossy_cobblestone, EnumProfessions.MINING);
+		blocksProfessions.put(Blocks.stained_hardened_clay, EnumProfessions.MINING);
 		blocksProfessions.put(Blocks.iron_ore, EnumProfessions.MINING);
 		blocksProfessions.put(Blocks.gold_ore, EnumProfessions.MINING);
 		blocksProfessions.put(Blocks.diamond_ore, EnumProfessions.MINING);
@@ -30,7 +31,10 @@ public class BlockProfessionRegistry {
 		blocksProfessions.put(Blocks.emerald_ore, EnumProfessions.MINING);
 		blocksProfessions.put(Blocks.lapis_ore, EnumProfessions.MINING);
 		blocksProfessions.put(Blocks.quartz_ore, EnumProfessions.MINING);
-
+		blocksProfessions.put(Blocks.nether_brick, EnumProfessions.MINING);
+		blocksProfessions.put(Blocks.netherrack, EnumProfessions.MINING);
+		blocksProfessions.put(Blocks.end_stone, EnumProfessions.MINING);
+		blocksProfessions.put(Blocks.sandstone, EnumProfessions.MINING);
 	}
 	
 	public static void registerDigging(){
@@ -38,6 +42,9 @@ public class BlockProfessionRegistry {
 		blocksProfessions.put(Blocks.grass, EnumProfessions.DIGGING);
 		blocksProfessions.put(Blocks.sand, EnumProfessions.DIGGING);
 		blocksProfessions.put(Blocks.gravel, EnumProfessions.DIGGING);
+		blocksProfessions.put(Blocks.clay, EnumProfessions.DIGGING);
+		blocksProfessions.put(Blocks.snow, EnumProfessions.DIGGING);
+		blocksProfessions.put(Blocks.soul_sand, EnumProfessions.DIGGING);
 	}
 	
 	public static void registerWoodcutting(){
